@@ -1,8 +1,0 @@
-# Referenced at C:\Apps\app_Portfolio\build\app\intermediates\merged_manifests\release\AndroidManifest.xml:19
--keep class androidx.core.app.CoreComponentFactory { <init>(); }
-# Referenced at C:\Apps\app_Portfolio\build\app\intermediates\merged_manifests\release\AndroidManifest.xml:24
--keep class appportfolio.com.br.MainActivity { <init>(); }
-# Referenced at C:\Apps\app_Portfolio\build\app\intermediates\merged_manifests\release\AndroidManifest.xml:19
--keep class io.flutter.app.FlutterApplication { <init>(); }
-# Referenced at C:\Apps\app_Portfolio\build\app\intermediates\merged_manifests\release\AndroidManifest.xml:66
--keep class io.flutter.plugins.urllauncher.WebViewActivity { <init>(); }
