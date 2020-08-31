@@ -21,9 +21,8 @@ class Doodle {
 
 const List<Doodle> doodles = [
   Doodle(
-    day: "14.JAN",
-      name:
-          "Encontro na Praça Zumira",
+      day: "14.JAN",
+      name: "Encontro na Praça Zumira",
       time: "14/01/2021-18:30-19:00",
       content:
           "Abu al-Wafa' is an innovator whose contributions to science include one of the first known introductions",
@@ -32,7 +31,7 @@ const List<Doodle> doodles = [
       icon: Icon(Icons.donut_large, color: Colors.white),
       iconBackground: Colors.blue),
   Doodle(
-    day: "18.JAN ",
+      day: "18.JAN ",
       name: "Evento Praça da Liberdade",
       time: "18/01/200 - 16:00-17:00 ",
       content:
@@ -45,9 +44,8 @@ const List<Doodle> doodles = [
       ),
       iconBackground: Colors.blueGrey),
   Doodle(
-    day: "20.JAN",
-      name:
-          "Evento na Rua Maria",
+      day: "20.JAN",
+      name: "Evento na Rua Maria",
       time: "20/01/200 - 14:00-14:30 ",
       content:
           " Abu al-Wafa' is an innovator whose contributions to science include one of the first known introductions",

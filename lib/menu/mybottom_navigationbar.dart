@@ -12,7 +12,7 @@ class MyBottomNavigationBar extends StatefulWidget {
 class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
   int _currentIndex = 0;
   final List<Widget> _children = [
-    teste_tela(),
+    TesteTela(),
     GaleriaScreen(),
     AgendaScreen(),
     ContatoScreen(),

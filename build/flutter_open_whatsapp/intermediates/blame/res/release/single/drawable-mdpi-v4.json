@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Apps\\app_Portfolio\\build\\flutter_open_whatsapp\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\notification_bg_normal.9.png",
+        "source": "C:\\Users\\vitor\\.gradle\\caches\\transforms-2\\files-2.1\\6b399c2363bb098ebde1725d903cbda0\\core-1.1.0\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "C:\\Apps\\app_Portfolio\\build\\flutter_open_whatsapp\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png",
+        "source": "C:\\Users\\vitor\\.gradle\\caches\\transforms-2\\files-2.1\\6b399c2363bb098ebde1725d903cbda0\\core-1.1.0\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Apps\\app_Portfolio\\build\\flutter_open_whatsapp\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\notification_bg_low_normal.9.png",
+        "source": "C:\\Users\\vitor\\.gradle\\caches\\transforms-2\\files-2.1\\6b399c2363bb098ebde1725d903cbda0\\core-1.1.0\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "C:\\Apps\\app_Portfolio\\build\\flutter_open_whatsapp\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png",
+        "source": "C:\\Users\\vitor\\.gradle\\caches\\transforms-2\\files-2.1\\6b399c2363bb098ebde1725d903cbda0\\core-1.1.0\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "C:\\Apps\\app_Portfolio\\build\\flutter_open_whatsapp\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png",
+        "source": "C:\\Users\\vitor\\.gradle\\caches\\transforms-2\\files-2.1\\6b399c2363bb098ebde1725d903cbda0\\core-1.1.0\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
+    }
+]

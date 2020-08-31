@@ -30,8 +30,7 @@ class _TimelinePageState extends State<TimelinePage> {
           onPageChanged: (i) => setState(() => pageIx = i),
           controller: pageController,
           children: pages,
-        )
-    );
+        ));
   }
 
   timelineModel(TimelinePosition position) => Timeline.builder(
@@ -69,19 +68,26 @@ class _TimelinePageState extends State<TimelinePage> {
                 const SizedBox(
                   height: 8.0,
                 ),
-                Text(doodle.time, style: textTheme.caption,textAlign: TextAlign.left,),
+                Text(
+                  doodle.time,
+                  style: textTheme.caption,
+                  textAlign: TextAlign.left,
+                ),
                 const SizedBox(
                   height: 8.0,
                 ),
                 //Image.network(doodle.doodle),
-                Text(doodle.content, style: textTheme.caption, textAlign: TextAlign.left,),
-                const SizedBox(
-                  height: 8.0,
+                Text(
+                  doodle.content,
+                  style: textTheme.caption,
+                  textAlign: TextAlign.left,
                 ),
                 const SizedBox(
                   height: 8.0,
                 ),
-
+                const SizedBox(
+                  height: 8.0,
+                ),
               ],
             ),
           ),

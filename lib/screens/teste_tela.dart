@@ -6,13 +6,12 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:flutter_open_whatsapp/flutter_open_whatsapp.dart';
 
-class teste_tela extends StatefulWidget {
+class TesteTela extends StatefulWidget {
   @override
-  _teste_telaState createState() => _teste_telaState();
+  _TesteTelaState createState() => _TesteTelaState();
 }
 
-class _teste_telaState extends State<teste_tela> {
-
+class _TesteTelaState extends State<TesteTela> {
   Future<void> _launched;
   String phoneNumber = '';
   String _launchUrl = 'https://flutter.dev/';
@@ -22,7 +21,8 @@ class _teste_telaState extends State<teste_tela> {
   void initState() {
     super.initState();
     initPlatformState();
-  }//SAP
+  } //SAP
+
   Future<void> initPlatformState() async {
     String platformVersion;
     // Platform messages may fail, so we use a try/catch PlatformException.
@@ -38,7 +38,8 @@ class _teste_telaState extends State<teste_tela> {
     });
   }
 
-  Future<void> _launchInBrowser(String url) async { //Abra o url no navegador
+  Future<void> _launchInBrowser(String url) async {
+    //Abra o url no navegador
     if (await canLaunch(url)) {
       await launch(
         url,
@@ -63,6 +64,7 @@ class _teste_telaState extends State<teste_tela> {
       }
     }
   }
+
   @override
   Widget build(BuildContext context) {
     const _fotoPerfil =
@@ -70,9 +72,9 @@ class _teste_telaState extends State<teste_tela> {
     const _sobremin = "sjdakn samçfla";
     const _nome = "Rafael";
     const _sobrenome = "Silva";
-
-    return Scaffold(
-      body: Stack(
+    //return Container();
+    return Container(
+      child: Stack(
         children: <Widget>[
           Container(
             color: Colors.blue,
@@ -111,12 +113,12 @@ class _teste_telaState extends State<teste_tela> {
                           backgroundImage: NetworkImage(_fotoPerfil),
                         ),
                         SizedBox(
-                          width: 40,//distancia nome e imagem
+                          width: 40, //distancia nome e imagem
                         ),
-                        Text(_nome,
-                          style: TextStyle(
-                              fontSize: 20
-                          ),),
+                        Text(
+                          _nome,
+                          style: TextStyle(fontSize: 20),
+                        ),
                         SizedBox(
                           width: 5,
                         ),
@@ -135,24 +137,28 @@ class _teste_telaState extends State<teste_tela> {
                     alignment: Alignment.center,
                     color: Colors.white,
                     padding: EdgeInsets.all(20.0),
-                    child: Expanded(
-                      child: Center(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            Text("SOBRE MIM",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20,
-                              ),),
-                            SizedBox(height: 10,),
-                            Text(_sobremin)//sobre min conteudo
-                          ],
-                        ),
+                    child: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Text(
+                            "SOBRE MIM",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(_sobremin) //sobre min conteudo
+                        ],
                       ),
                     ),
                   ),
-                  Padding(padding: EdgeInsets.all(10),),
+                  Padding(
+                    padding: EdgeInsets.all(10),
+                  ),
                   Expanded(
                     child: Align(
                         alignment: Alignment.bottomCenter,
@@ -161,11 +167,15 @@ class _teste_telaState extends State<teste_tela> {
                             child: Container(
                               padding: EdgeInsets.only(bottom: 10),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: <Widget>[
                                   //WHATSAPP
                                   RaisedButton(
-                                    onPressed: () { FlutterOpenWhatsapp.sendSingleMessage("5531982785771", "Olá Rafael!");},
+                                    onPressed: () {
+                                      FlutterOpenWhatsapp.sendSingleMessage(
+                                          "5531982785771", "Olá Rafael!");
+                                    },
                                     textColor: Colors.white,
                                     padding: const EdgeInsets.all(0.0),
                                     color: Colors.white,
@@ -182,8 +192,7 @@ class _teste_telaState extends State<teste_tela> {
                                         borderRadius: BorderRadius.only(
                                           topLeft: Radius.circular(10.0),
                                           topRight: Radius.circular(10.0),
-                                          bottomRight:
-                                          Radius.circular(10.0),
+                                          bottomRight: Radius.circular(10.0),
                                           bottomLeft: Radius.circular(10.0),
                                         ),
                                       ),
@@ -192,8 +201,8 @@ class _teste_telaState extends State<teste_tela> {
                                       child: Container(
                                         width: 60,
                                         height: 60,
-                                        child: Image.asset(
-                                            'images/whastsapp.png'),
+                                        child:
+                                            Image.asset('images/whastsapp.png'),
                                       ),
                                     ),
                                   ),
@@ -201,7 +210,8 @@ class _teste_telaState extends State<teste_tela> {
                                   RaisedButton(
                                     onPressed: () {
                                       setState(() {
-                                        _launched = _launchUniversalLinkIos('https://www.instagram.com/');
+                                        _launched = _launchUniversalLinkIos(
+                                            'https://www.instagram.com/');
                                       });
                                     },
                                     textColor: Colors.white,
@@ -220,8 +230,7 @@ class _teste_telaState extends State<teste_tela> {
                                         borderRadius: BorderRadius.only(
                                           topLeft: Radius.circular(10.0),
                                           topRight: Radius.circular(10.0),
-                                          bottomRight:
-                                          Radius.circular(10.0),
+                                          bottomRight: Radius.circular(10.0),
                                           bottomLeft: Radius.circular(10.0),
                                         ),
                                       ),
@@ -230,8 +239,8 @@ class _teste_telaState extends State<teste_tela> {
                                       child: Container(
                                         width: 60,
                                         height: 60,
-                                        child: Image.asset(
-                                            'images/instagram.png'),
+                                        child:
+                                            Image.asset('images/instagram.png'),
                                       ),
                                     ),
                                   ),
@@ -239,7 +248,8 @@ class _teste_telaState extends State<teste_tela> {
                                   RaisedButton(
                                     onPressed: () {
                                       setState(() {
-                                        _launched = _launchUniversalLinkIos('https://pt-br.facebook.com/');
+                                        _launched = _launchUniversalLinkIos(
+                                            'https://pt-br.facebook.com/');
                                       });
                                     },
                                     textColor: Colors.white,
@@ -258,8 +268,7 @@ class _teste_telaState extends State<teste_tela> {
                                         borderRadius: BorderRadius.only(
                                           topLeft: Radius.circular(10.0),
                                           topRight: Radius.circular(10.0),
-                                          bottomRight:
-                                          Radius.circular(10.0),
+                                          bottomRight: Radius.circular(10.0),
                                           bottomLeft: Radius.circular(10.0),
                                         ),
                                       ),
@@ -268,8 +277,8 @@ class _teste_telaState extends State<teste_tela> {
                                       child: Container(
                                         width: 60,
                                         height: 60,
-                                        child: Image.asset(
-                                            'images/facebook.png'),
+                                        child:
+                                            Image.asset('images/facebook.png'),
                                       ),
                                     ),
                                   ),
@@ -277,7 +286,8 @@ class _teste_telaState extends State<teste_tela> {
                                   RaisedButton(
                                     onPressed: () {
                                       setState(() {
-                                        _launched = _launchUniversalLinkIos('https://twitter.com/');
+                                        _launched = _launchUniversalLinkIos(
+                                            'https://twitter.com/');
                                       });
                                     },
                                     textColor: Colors.white,
@@ -296,8 +306,7 @@ class _teste_telaState extends State<teste_tela> {
                                         borderRadius: BorderRadius.only(
                                           topLeft: Radius.circular(10.0),
                                           topRight: Radius.circular(10.0),
-                                          bottomRight:
-                                          Radius.circular(10.0),
+                                          bottomRight: Radius.circular(10.0),
                                           bottomLeft: Radius.circular(10.0),
                                         ),
                                       ),
@@ -306,8 +315,8 @@ class _teste_telaState extends State<teste_tela> {
                                       child: Container(
                                         width: 60,
                                         height: 60,
-                                        child: Image.asset(
-                                            'images/twitter.png'),
+                                        child:
+                                            Image.asset('images/twitter.png'),
                                       ),
                                     ),
                                   ),
@@ -315,7 +324,8 @@ class _teste_telaState extends State<teste_tela> {
                                   RaisedButton(
                                     onPressed: () {
                                       setState(() {
-                                        _launched = _launchInBrowser(_launchUrl);
+                                        _launched =
+                                            _launchInBrowser(_launchUrl);
                                       });
                                     },
                                     textColor: Colors.white,
@@ -334,8 +344,7 @@ class _teste_telaState extends State<teste_tela> {
                                         borderRadius: BorderRadius.only(
                                           topLeft: Radius.circular(10.0),
                                           topRight: Radius.circular(10.0),
-                                          bottomRight:
-                                          Radius.circular(10.0),
+                                          bottomRight: Radius.circular(10.0),
                                           bottomLeft: Radius.circular(10.0),
                                         ),
                                       ),
@@ -344,16 +353,14 @@ class _teste_telaState extends State<teste_tela> {
                                       child: Container(
                                         width: 60,
                                         height: 60,
-                                        child: Image.asset(
-                                            'images/site_logo.png'),
+                                        child:
+                                            Image.asset('images/site_logo.png'),
                                       ),
                                     ),
                                   ),
                                 ],
                               ),
-                            )
-                        )
-                    ),
+                            ))),
                   )
                 ],
               ),
